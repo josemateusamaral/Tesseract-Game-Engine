@@ -163,7 +163,7 @@ int main( int argc, char* args[] )
 
 			//girar planetas ao redor do sol e atualizar sua iluminacao
 			for( int i = 0 ; i < 4 ; i++ ){
-				planetas[i].angulo += planetas[i].velocidade;
+				planetas[i].angulo += planetas[i].velocidade % 360;
 
 				//nova posicao do planeta
 				npx = planetas[i].orbitar -> posicao.x + (planetas[i].raio * cos( (planetas[i].angulo + (100 * i)) * M_PI / 180 ));
